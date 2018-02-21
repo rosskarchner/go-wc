@@ -5,7 +5,7 @@ This is my attempt to write a go clone of the BSD `wc` (word count) command, as 
 It behaves pretty much the same way as `wc`, with two caveats:
 
 - There is not (yet) a differentiation between "bytes" and "characters", and no -m argument
-- In `wc`, you can pass all of your arguments together (like `wc -wlc` vs `wc -w -l -c`)
+- In `wc`, you can pass all of your arguments together (like `wc -wlc` vs `wc -w -l -c`), but that isn't supported here yet
 
 # Compile
 
