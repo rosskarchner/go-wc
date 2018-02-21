@@ -70,6 +70,7 @@ func main() {
 	total_line_count := 0
 	total_byte_count := 0
 
+	// if there are positional arguments
 	if flag.NArg() != 0 {
 		for _, filename := range flag.Args() {
 			file, err := os.Open(filename)
@@ -87,6 +88,7 @@ func main() {
 		}
 
 	} else {
+		// no positional arguments, use stdin
 		words, lines, bytes := count_file(os.Stdin)
 		format_counts(lines, words, bytes, "")
 	}
