@@ -2,7 +2,7 @@
 
 This is my attempt to write a go clone of the BSD `wc` (word count) command ([as shipped by Apple](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/wc.1.html)), just as a project for learning go.
 
-It behaves pretty much the same way as `wc`, with two caveats:
+It behaves pretty much the same way as `wc`, with some caveats:
 
 - There is not (yet) a differentiation between "bytes" and "characters", and no -m argument
 - In `wc`, you can pass all of your arguments together (like `wc -wlc` vs `wc -w -l -c`), but that isn't supported here yet
