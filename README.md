@@ -5,7 +5,8 @@ This is my attempt to write a go clone of the BSD `wc` (word count) command ([as
 It behaves pretty much the same way as `wc`, with some caveats:
 
 - In `wc`, you can pass all of your arguments together (like `wc -wlc` vs `wc -w -l -c`), but that isn't supported here yet
-- the only supported arguments are -w, -l, and -c, and -m
+- the only supported arguments are `-w`, `-l`, and `-c`, and `-m`
+- `-m` and `-c` are exclusive. the `wc` manpage says that the *last* one of them specified takes precendence. Here, instead, the program simply fails if you try to specify both.
 
 # Compile
 
