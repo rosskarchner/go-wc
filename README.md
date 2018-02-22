@@ -10,38 +10,38 @@ It behaves pretty much the same way as `wc`, with some caveats:
 
 # Compile
 
-`go build -o mywc`
+`go build cmd/wc/wc.go`
 
 # Usage
 
 
 Get the lines, words, and bytes of a file:
 ```sh
-$ ./mywc foo.txt   
+$ ./wc foo.txt   
  3 4 27 foo.txt
 ```
 
 or multiple files...
 ```sh
-$ ./mywc foo.txt bar.txt 
+$ ./wc foo.txt bar.txt 
  3 4 27 foo.txt
  3 4 27 bar.txt
  6 8 54 total
 ```
 or stdin...
 ```sh
-$ ./mywc < foo.txt       
+$ ./wc < foo.txt       
  4 3 27 
-$ ls | ./mywc 
+$ ls | ./wc 
  5 5 30 
 ```
 You can request just the lines, word, or bytes count with -l, -w, or -c
 
 ```sh
-$ ls | ./mywc -l
+$ ls | ./wc -l
  5 
-$ ./mywc -w foo.txt   
+$ ./wc -w foo.txt   
  4 foo.txt
-$ ./mywc -c foo.txt
+$ ./wc -c foo.txt
  27 foo.txt
 ```
