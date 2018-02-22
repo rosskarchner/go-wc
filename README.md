@@ -4,9 +4,8 @@ This is my attempt to write a go clone of the BSD `wc` (word count) command ([as
 
 It behaves pretty much the same way as `wc`, with some caveats:
 
-- There is not (yet) a differentiation between "bytes" and "characters", and no -m argument
 - In `wc`, you can pass all of your arguments together (like `wc -wlc` vs `wc -w -l -c`), but that isn't supported here yet
-- the only supported arguments are -w, -l, and -c
+- the only supported arguments are -w, -l, and -c, and -m
 
 # Compile
 
@@ -35,7 +34,7 @@ $ ./wc < foo.txt
 $ ls | ./wc 
  5 5 30 
 ```
-You can request just the lines, word, or bytes count with -l, -w, or -c
+You can request just the lines, words, bytes, or characters (really, [runes](https://golang.org/pkg/builtin/#rune)) count with -l, -w, or -c
 
 ```sh
 $ ls | ./wc -l
