@@ -34,7 +34,7 @@ $ ./wc < foo.txt
 $ ls | ./wc 
  5 5 30 
 ```
-You can request just the lines, words, bytes, or characters (really, [runes](https://golang.org/pkg/builtin/#rune)) count with -l, -w, or -c
+You can request just the lines, words, bytes, or characters (really, [runes](https://golang.org/pkg/builtin/#rune)) count with -l, -w, -c or -m
 
 ```sh
 $ ls | ./wc -l
